@@ -1,0 +1,411 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+#container {
+  font-family:"cursive" ;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 12vw 20vw 20vw 20vw 20vw;
+  grid-template-rows: 50px 75vh 75vh 75vh;
+  height: 700px;
+  grid-gap: 2%;
+}
+
+.items:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 2px 15px;
+  transform:scale(1.05) rotate(0deg);
+}
+.items {
+  transition: all 0.2s ease in;
+  cursor: pointer;
+  margin: 5%;
+  padding: 5px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 3px 15px;
+  text-align: center;
+
+  & img {
+    height: 70%;
+    width: 100%;
+    items-align: center;
+    margin: auto;
+    margin: 0;
+    display: inline-block;
+  }
+  & .shoeName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 6px;
+    text-align: center;
+  }
+  & h3 {
+    color: black;
+    margin: 6px;
+    text-align: center;
+  }
+  & h4,
+  h5 {
+    font-size: 0.9rem;
+    color: gray;
+    text-align: center;
+  }
+  & h3:hover {
+    color: orange;
+  }
+}
+#div1 {
+  grid-column: 1/-1;
+  margin: 0;
+  & ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.2rem;
+    & #cartName {
+      font-size: 2rem;
+      position: absolute;
+      left: 4%;
+    }
+    & li {
+      list-style-type: none;
+      margin-left: 70px;
+      margin-top: 15px;
+      font-size: 20px;
+    }
+    & .coolLink::after{
+      content:'';
+      display:block;
+      width:0;
+      height:2px;
+      background:orange;
+      transition: width .3s;
+    }
+    & .coolLink:hover::after{
+      width:100%;
+    }
+    &h1:hover {
+      color: orange;
+    }
+    & li:hover {
+      color: orange;
+    }
+    & :hover {
+      cursor: pointer;
+    }
+    & #cartIcon {
+      font-size: 2rem;
+      position:relative;
+      right:40px;
+    }
+    & #cartIcon:hover::after{
+      width:0%;
+    }
+  }
+  & nav {
+    background-color: white;
+    height: 100%;
+  }
+  & #searchInput {
+    cursor: auto;
+    width: 300px;
+    height: 25px;
+  }
+}
+#div2 {
+  grid-row: 2 / span 4;
+  & ul {
+    font-weight:500;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    background-color: white;
+    font-size: 20px;
+    margin-top: 40px;
+  }
+  & li {
+    cursor: pointer;
+    margin: 20px;
+    margin-left: 30px;
+  }
+ 
+  & li:hover {
+    color: orange;
+  }
+}
+
+.shoeInfoDiv {
+  background-color: white;
+  border: 1px solid black;
+  height: 100vh;
+  width: 90vw;
+  position: fixed;
+  top: 30px;
+  left: 50px;
+
+  & #infoCloseIcon {
+    font-size: 3rem;
+    position: absolute;
+    right: 0;
+    background-color: orange;
+    border-radius: 0 0 0 45%;
+  }
+  & .shoeInfo {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    width: 40%;
+    margin-top: 30px;
+  }
+
+  & h1 {
+    font-size: 1.5em;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  & img {
+    height: 400px;
+    width: 35%;
+    position: absolute;
+    top: 20%;
+    background-color: white;
+  }
+  & h4 {
+    color: gray;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  & .shoeSizes {
+    display: flex;
+    position: absolute;
+    position: absolute;
+    right: 32%;
+    top: 35%;
+    margin-top: 30px;
+    border: 1px solid black;
+    background-color: orange;
+    width: 110px;
+    border-radius: 10px;
+    justify-content: space-around;
+    & select {
+      border-radius: 10px;
+      height: 25px;
+      background-color: inherit;
+      border: none;
+    }
+
+    & div {
+      border: 1px solid black;
+      width: 4rem;
+      height: 2rem;
+      text-align: center;
+      padding: 0.5rem;
+      border-radius: 5px;
+    }
+  }
+  & .selectQuantityShow {
+    display: flex !important;
+    position: absolute;
+    right: 32%;
+    top: 30%;
+    width: 110px;
+    border: 1px solid black;
+    background-color: #ffd814;
+    border-radius: 10px;
+    justify-content: space-around;
+    & select {
+      border-radius: 10px;
+      height: 25px;
+      border: none;
+      background-color: inherit;
+    }
+  }
+  & .buyButton {
+    position: absolute;
+    top: 65%;
+    right: 8%;
+    width: 15%;
+    height: 6%;
+    background-color: orange;
+    border-radius: 20px;
+  }
+  & .buyButton:hover,.addCartButton:hover{
+    transform:scale(1.05) rotate(0deg);
+  }
+
+  & .addCartButton {
+    width: 15%;
+    height: 6%;
+    position: absolute;
+    top: 65%;
+    right: 25%;
+    background-color: #ffd814;
+    border-radius: 20px;
+  }
+}
+
+.cartContainer {
+  display: none;
+  padding-top: 20px;
+}
+.cartContainerShow {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 90vw;
+  height: 100vh;
+  border: 3px solid black;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  align-items: center;
+  overflow: hidden;
+
+  & #cartCloseIcon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 3rem;
+    background-color: orange;
+    border-radius: 0 0 0 45%;
+  }
+}
+.cartDiv {
+  background-color: white;
+  height: 15vh;
+  width: 70%;
+  display: block;
+  margin: 5px;
+  position: relative;
+  border-bottom: 1px solid black;
+  & img {
+    width: 13%;
+    height: 85%;
+    float: left;
+    padding: 10px;
+  }
+  & h1,
+  h3,
+  span {
+    font-size: 20px;
+    word-break: break-word;
+    display: block;
+    position: relative;
+    right: -10%;
+    top: 10px;
+  }
+  & h1:hover {
+    color: orange;
+  }
+  & #removeCartedItemIcon {
+    position: absolute;
+    right: 0;
+    top: 30%;
+    font-size: 1.5rem;
+  }
+}
+#selectQuantity {
+  display: none;
+}
+#shoeSizes {
+  display: none;
+}
+
+.buyButtonPopUp {
+  position: fixed;
+  bottom: 10vh;
+  left: 45vw;
+  border: 1px solid black;
+  border-radius: 2px 2px;
+  width: 200px;
+  height: 50px;
+  background-color: lightblue;
+  text-align: center;
+  font-size: 1.5rem;
+}
